@@ -24,6 +24,10 @@ def vitre(N, k):
     for i in range(N):
         tab[0][i] = i  # On a besoin de i tests si il y a i niveaux de forces pour tester et 1 seule vitre
 
+    # Cas de base
+    if k == 0 or N == 0:
+        return 0
+
     # Remplissage du tableau
     for i in range(1, k):
         for j in range(1, N):
@@ -35,7 +39,6 @@ def vitre(N, k):
                     tab[i][j] = nb_tests
 
     return tab[k-1][N-1]
-
 
 
 # Fonction main, vous ne devriez pas avoir à modifier
