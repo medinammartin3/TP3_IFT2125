@@ -10,6 +10,7 @@
 // #include <algorithm>
 #include <iostream>
 #include <iterator>
+#include <cstdint>
 
 using namespace std;
 
