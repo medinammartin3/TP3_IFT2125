@@ -5,9 +5,9 @@ import sys
 import random
 
 dimension = 20
-cell_size = 2.5
-wall_height = 5
-wall_thickness = 1
+cell_size = 5
+wall_height = 18
+wall_thickness = 2.5
 
 strategy_choice = 1
 
@@ -162,7 +162,7 @@ class Creator() :
                                "}\n")
         # Finir les bordures externes
         file.write(f"translate([{cell_size*dimension-cell_size/2},{cell_size*(dimension*2)-wall_thickness/2},{wall_height/2+1}]){{\n"
-                   f"cube([{cell_size*(dimension*2) - cell_size},{wall_thickness},{wall_height}], center=true);\n"
+                   f"cube([{cell_size*(dimension*2) - cell_size*2},{wall_thickness},{wall_height}], center=true);\n"
                    "}\n"
                    f"translate([{cell_size*(dimension*2)-wall_thickness/2},{cell_size*dimension},{wall_height/2+1}]){{\n"
                    "rotate([0,0,90]){\n"
